@@ -18,36 +18,36 @@
 
 
     <div id="banner" class="container">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-4">Car Parts Search!</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
-          <label for="input_name">First Name</label>
+          <label for="input_name">Customer Name</label>
           <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Alexander Zepeda">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">Example select</label>
+          <label for="input_dropdown">Car Parts</label>
           <select class="form-control" name="input_dropdown" id="input_dropdown">
-            <option>1 fish</option>
-            <option>2 fish</option>
-            <option>red fish</option>
-            <option>the spanish inquisition</option>
-            <option>blue fish</option>
+            <option>engine</option>
+            <option>transmission</option>
+            <option>exhaust</option>
+            <option>suspension</option>
+            <option>brakes</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="input_select">Example multiple select</label>
+          <label for="input_select">Price Range</label>
           <select multiple class="form-control" name="input_select" id="input_select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option>0-100</option>
+            <option>101-200</option>
+            <option>201-300</option>
+            <option>301-400</option>
+            <option>401-10,000</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="input_freeform">Example textarea</label>
+          <label for="input_freeform">User Comment</label>
           <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

@@ -8,9 +8,14 @@ def main():
 
 @app.route('/process_inputs', methods=['POST'])
 def process_inputs():
+    customer_message = ""
     name = request.form.get('input_name', '')
     dropdown = request.form.get('input_dropdown', '')
+    if dropdown == "engine":
+        customer_message = "Have 3 in stock"
+
+
+
     select = request.form.get('input_select', '')
     freeform = request.form.get('input_freeform', '')
-    return render_template("main_page.html", input_data=dropdown,
-                           output="You're a wizard %s." % name)
+    return render_template("main_page.html", output=customer_message)
