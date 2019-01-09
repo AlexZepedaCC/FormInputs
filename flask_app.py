@@ -10,12 +10,14 @@ def main():
 def process_inputs():
     customer_message = ""
     name = request.form.get('input_name', '')
-    dropdown = request.form.get('input_dropdown', '')
+    dropdown = request.form.get('input_dropdown', '').lower()
     if dropdown == "engine":
         customer_message = "Have 3 in stock"
-
-
+    elif dropdown == "transmission":
+        customer_message = "Only 1 left in stock"
+    else:
+        customer_message = "No more in stock"
 
     select = request.form.get('input_select', '')
     freeform = request.form.get('input_freeform', '')
-    return render_template("main_page.html", output=customer_message)
+    return render_template("main_page.html", output = customer_message)
